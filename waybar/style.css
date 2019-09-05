@@ -1,0 +1,130 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: Source Code Pro;
+	font-size: 14px;
+}
+
+window#waybar {
+	background: #3B4252;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+	padding-left: 16px;
+	padding-right: 16px;
+	border-radius: 26px;
+	transition: none;
+	color: #f8f8f2;
+	background: #282a36;
+	color: transparent;
+	background: transparent;
+}
+
+window#waybar.termite #window,
+window#waybar.Firefox #window,
+window#waybar.Navigator #window,
+window#waybar.PCSX2 #window {
+	color: #4d4d4d;
+	background: #e6e6e6;
+}
+
+label:focus {
+	background: #ECEFF4;
+}
+
+#workspaces {
+	margin-left: 10px;
+	margin-bottom: 0;
+	background: #3B4252;
+	transition: none;
+}
+
+#workspaces button {
+	transition: none;
+	color: #ECEFF4;
+	background: transparent;
+	font-size: 16px;
+}
+
+#workspaces button.focused {
+	background: #4C566A;
+}
+
+#workspaces button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #434C5E;
+	background: #D8DEE8;
+}
+
+#network,
+#cpu,
+#battery,
+#backlight,
+#idle_inhibitor,
+#memory,
+#clock {
+	margin-left: 8px;
+	margin-bottom: 0;
+	transition: none;
+	padding-left: 16px;
+	padding-right: 16px;
+	background: #2E3440;
+	color: #ECEFF4;
+}
+
+#network {
+	background: #5E81AC;
+}
+
+#cpu {
+	background: #B48EAD;
+	color: #3B4252;
+}
+
+#memory {
+	background: #EBCB8B;
+	color: #3B4252;
+}
+
+#clock, #tray {
+	margin-right: 10px;
+}
+
+#idle_inhibitor {
+	color: #E6E9F0;
+	background: #4C566A;
+}
+
+#idle_inhibitor.activated {
+	background: #E6E9F0;
+	color: #4C566A;
+}
+
+#battery {
+	background: #D8DEE9;
+	color: #3B4252;
+}
+
+#battery.charging {
+	background: #A3BE8C;
+}
+
+@keyframes unchargedBlink {
+	to {
+		background: #BF616A;
+	}
+}
+
+#battery.critical:not(.charging) {
+	animation-name: unchargedBlink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: 20;
+	animation-direction: alternate;
+}
