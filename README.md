@@ -14,3 +14,6 @@ Other: light, grim
 Wallpaper: from r/wallpapers
 
 Theme based on Nord color scheme
+
+Screenshots
+![alt text](https://i.imgur.com/PGLxWcc.png)
